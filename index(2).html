@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лаба: 2</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function func(){
+            var x = Number (document.forms["frm"].elements["varx"].value);
+            var n = Number (document.forms["frm"].elements["varn"].value);
+            var i = 0;
+            for(var a=0; a<=n; a++){
+                 i=i+((x**((2*n)+1))/((2*n)+1));
+            }
+            document.writeln(i);
+        }
+      
+    </script>
+</head>
+<body>
+    <form id="frm">
+        <p>Введите переменуую x, которая больше 1:</p>
+        <input type="text" name="varx" id="x">
+        <p>Введите переменную для количества n:</p>
+        <input type="text" name="varn" id="n">
+        <input type="submit" value="OK" onclick="func()">
+    </form>
+</body>
+</html>

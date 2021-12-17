@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лаба: 4</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        var str = prompt("Введите текст: "); //Создаем переменную, куда запишем текст
+        var arr=str.split(/\.|!|\?/);//разделяем строку на массив по знакам препинания
+        var nArr= new Array();//создаём новый массив, где будут находится нужные предложения
+        for( var i=0; i<arr.length; i++){//перебираем элементы
+            if((arr[i].toLowerCase()).includes(word)){//берем элемент-предложение, опускаем его в нижний регистр, проверяем, включает ли в себя нужное слово
+                nArr.push(arr[i]);//если включает, добавляем к новому массиву этот элемент-предложение
+            }
+        }
+        var str=nArr.join("; ");
+        str = str.split("").reverse().join("");
+        alert(str);//вывод информации на экран
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лаба: 7</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        var browser = navigator.userAgent;
+        var answer = 0;
+        var x = prompt("Введите ваш X");
+        if(browser.indexOf("Firefox") > -1){
+        answer = Math.sin(x);
+        str = "sin"+x+" = "+answer;
+        }
+        else if(browser.indexOf("Chrome") > -1){
+        answer = (x**3)/3;
+        str = x+" ** 3 / 3 = "+answer;
+        }
+        else if(browser.indexOf("Opera") > -1){
+        answer = 10 * x;
+        str = "10 * "+x+" = "+answer;
+        }
+        alert(str);
+    </script>
+</body>
+</html>
